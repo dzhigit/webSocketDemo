@@ -4,7 +4,7 @@ const router = express.Router()
 expressWs(router);
 
 router.ws('/test', (ws, req) => {
-  ws.send('连接成功')
+  ws.send('Connect')
   let interval
   interval = setInterval(() => {
     if (ws.readyState === ws.OPEN) {
